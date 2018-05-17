@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+</head>
+
+<body>
+<H2>CS-585 &mdash; Natural Language Processing</H2>
+<H1>Programming  Assignment: Lexical Chains</H1>
+<P>
+<HR>
+
+You are to write a program that takes a text file as input and outputs
+the set of lexical chains in the text, using the method discussed in
+class (refer to the slides).  Use single words and don't worry about
+extracting nouns that are phrases (such as "White House" or "lexical
+chain").  Download Wordnet and (optional) a library for accessing it
+from Java, Ruby, or Python.  (If you find and use another Wordnet
+library, just document it.)
+
+<P>
+Do this project individually or in pairs (see below for extra assignment for pair projects.
+<p>
+<ol>
+  <li> Create lexical chains based on the lexical relationships of
+  synonymy, antonymy, and one level of hyper/hyponymy.  In other
+  words, if a noun is related by one of these relationships to an
+  existing lexical chain, it should be added to it, otherwise it
+  should start a new chain.<P>
+  Output should be in the form:
+  <pre>
+Chain 1: girl(2), woman(1), women(3), person(1), she(4)
+Chain 2: hat(2), skirt(1), pants(2), clothes(1), shirt(2)
+...
+</pre>
+  Each chain lists the words it contains, with the number of word
+  occurrences in parentheses.
+  <li> Evaluate the results (qualitatively) and comment on how they
+  might be improved. 
+  <li> (For pairs) Implement one of the following enhancements:
+  <ol>
+    <li> Use more lexical relationships, including sibling
+    hypo/hypernymy and meronym relationships.
+    <li> Only allow a noun to enter a lexical chain if it is within a
+    threshold number of words (this should be a parameter) to the
+    closest element of the chain.
+    <li> As you add elements to a chain, restrict the senses (synsets)
+    of the nouns in the chain to those consistent with all nouns in
+    the chain (i.e., just those senses related by the given lexical
+    relations).
+    <li> Find and use phrasal nouns, not just single words.  You can
+    do this by finding short sequences of words that have their own
+    entries in Wordnet.
+  </ol>
+ Evaluate the results of your enhanced system, and compare them
+  to the previous system.
+  <li> Extra credit: Use the lexical chains to automatically create a
+  summary of the input article.
+</ol>
+<hr>
+<h3>Links:</h3>
+<a href="http://wordnet.princeton.edu/wordnet/download/">Wordnet</a><BR>
+<a href="http://sourceforge.net/projects/jwordnet/">Java library </a><BR>
+<a href="http://deveiate.org/projects/Ruby-WordNet/">Ruby library </a><BR>
+<a href="http://www.nltk.org/">Python library (integrated NLP toolkit) </a><BR>
+
+<hr>
+<address>argamon</address>
+<!-- hhmts start -->Last modified: Thu Apr 22 17:07:53 CDT 2010 <!-- hhmts end -->
+</body> </html>
